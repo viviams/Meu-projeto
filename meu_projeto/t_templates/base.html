@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- página template(modelo) com layout base das páginas do site -->
+
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <title>Perfil do Usuário</title>
+    <link rel = "stylesheet" href="{{ url_for('static', filename = 'css/estilo.css')}}">
+    {% block scripts %} {% endblock %}
+  </head>
+ 
+  <body>
+    <div>
+    <!--Informação fixa nas páginas coloca neste template -->
+    <img src="https://ifro.edu.br/img/logo-ifro-hotsite.png" alt="logo IFRO" width = 70 height = 70>
+    <br>
+    </div>
+    
+    <nav> 
+        <a href="/index">Página Inicial</a>
+        <a href="/contato">Contatos</a>
+        <a href="/usuario">Perfil do Usuário</a>
+    </nav>
+    
+    <!--Informação que muda nas páginas coloca como extensão -->
+    {% block conteudo %}    
+
+    {% endblock %}
+
+    <h6>Copyright₢ 2024</h6> <!--Ctrl+Alt+C-->
+  </body>
+</html>

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<head>
+    <title>Cadastro</title>
+    <script>
+        function validarForm() {
+            var usu = document.getElementById("nome_usuario").value;
+            var pwd = document.getElementById("senha").value;
+
+        }
+    </script>
+</head>
+
+{% block conteudo %}
+
+<h2>Seja bem-vindo(a) {{nome}}</h2> 
+<!-- ao clickar no botão, no submit vai para a rota /submeterCadastro -->
+<br />
+<form action="/submit" method="POST">
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" required><br><br>
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" required><br><br>
+
+    <label for="profissao">Profissão:</label>
+    <input type="text" id="profissao" name="profissao" required><br><br>
+
+    <input type="submit" value="Cadastrar">
+
+</form>
+
+{% endblock %}
