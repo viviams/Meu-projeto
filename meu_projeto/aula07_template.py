@@ -16,7 +16,7 @@ def contato():
 
 @app_viviam.route("/usuario", defaults={"nome_usuario":"usuário?","nome_profissao":""}) 
 def usuarios (nome_usuario, nome_profissao):
-    dados_usu = {"profissao": nome_profissao, "disciplina":"Desenvolvimento Web III"}
+    dados_usu = {"profissao": "analista", "disciplina":"Desenvolvimento Web III"}
     return render_template ("t_usuario.html", nome=nome_usuario, dados = dados_usu)  
 
 
